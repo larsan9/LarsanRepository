@@ -1,0 +1,41 @@
+name: Actualizar addons.xml del repositorio
+
+# Se ejecuta automáticamente cada vez que subes/cambias algo dentro de zips/
+# (es decir: cada vez que subes un addon nuevo o una nueva versión).
+# También se puede lanzar a mano desde la pestaña "Actions" de GitHub.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "zips/**"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Regenerar addons.xml, addons.xml.md5 y repository.larsan.zip
+        run: python3 scripts/generate_addons_xml.py
+
+      - name: Commit y push de los ficheros generados
+        run: |
+          git config user.name "larsan-repo-bot"
+          git config user.email "actions@github.com"
+          git add addons.xml addons.xml.md5 repository.larsan.zip
+          if git diff --cached --quiet; then
+            echo "No hay cambios que commitear."
+          else
+            git commit -m "chore: regenerar addons.xml automáticamente [skip ci]"
+            git push
+          fi
