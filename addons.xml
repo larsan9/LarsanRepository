@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="plugin.program.larsanwizard" name="Larsan Wizard" version="1.0.0" provider-name="larsan9">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Larsan Wizard - test addon</summary>
+    <summary lang="es_ES">Larsan Wizard - addon de prueba</summary>
+    <description lang="en_GB">Simple addon used to verify that the Larsan repository installs and updates correctly.</description>
+    <description lang="es_ES">Addon sencillo para comprobar que el repositorio Larsan instala y actualiza addons correctamente.</description>
+    <platform>all</platform>
+    <license>MIT</license>
+    <source>https://github.com/larsan9/LarsanRepository</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+<addon id="repository.larsan" name="Larsan Repository" version="1.0.0" provider-name="larsan9">
+  <extension point="xbmc.addon.repository" name="Larsan Repository">
+    <dir>
+      <info compressed="false">https://larsan9.github.io/LarsanRepository/addons.xml</info>
+      <checksum>https://larsan9.github.io/LarsanRepository/addons.xml.md5</checksum>
+      <datadir zip="true">https://larsan9.github.io/LarsanRepository/zips</datadir>
+    </dir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Larsan Repository</summary>
+    <summary lang="es_ES">Repositorio de Larsan</summary>
+    <description lang="en_GB">Personal Kodi addon repository maintained by larsan9.</description>
+    <description lang="es_ES">Repositorio personal de addons de Kodi mantenido por larsan9.</description>
+    <platform>all</platform>
+    <license>MIT</license>
+    <source>https://github.com/larsan9/LarsanRepository</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+</addons>
