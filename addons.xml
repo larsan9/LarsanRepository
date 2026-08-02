@@ -20,6 +20,27 @@
     </assets>
   </extension>
 </addon>
+<addon id="plugin.video.jacktook" name="Darktook" version="1.4.2" provider-name="DarkTower">
+  <requires>
+    <import addon="xbmc.python" version="3.00.0"/>
+    <import addon="script.module.requests" version="2.25.1"/>
+    <import addon="script.module.routing" version="0.2.3"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="jacktook.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py"/>
+  <extension point="xbmc.python.module" library="lib"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Darktook</summary>
+    <description lang="en">Jacktook modificado para usar con Torrentio y Peerflix</description>
+    <license>GPL-2.0-only</license>
+        <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.png</fanart>
+          </assets>
+ </extension>
+</addon>
 <addon id="repository.GTKing-Phoenix" name="[B][COLOR steelblue]Repo [COLOR azure]GTKing [COLOR yellow]P[COLOR gold]H[COLOR goldenrod]O[COLOR orange]E[COLOR darkorange]N[COLOR red]I[COLOR orangered]X [COLOR limegreen]TEAM[/COLOR][/B]" version="21.0.0" provider-name="GTKing PHOENIX TEAM">
     <extension point="xbmc.addon.repository" name="[B][COLOR dodgerblue]Repo [COLOR azure]GTKing [COLOR yellow]P[COLOR gold]H[COLOR goldenrod]O[COLOR orange]E[COLOR darkorange]N[COLOR red]I[COLOR orangered]X [COLOR limegreen]TEAM[/COLOR][/B]">    
 		<dir minversion="19.9.9" maxversion="20.9.9">
@@ -81,6 +102,42 @@
         </assets>
         <source>https://github.com/alfa-addon/alfa-repo</source>
     </extension>
+</addon>
+<addon id="repository.balandro" name="[COLOR aqua]Balandro[/COLOR] Repo" version="4.0.1" provider-name="Team Balandro">
+
+    <extension point="xbmc.addon.repository" name="balandro repo">
+        <dir>
+            <info>https://raw.githubusercontent.com/repobal/base/main/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/repobal/base/main/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/repobal/base/main/</datadir>
+        </dir>
+    </extension>
+
+    <extension point="xbmc.addon.metadata">
+       <summary>Repositorio de Balandro</summary>
+       <assets>
+          <icon>icon.png</icon>
+       </assets>
+       <news>
+       [COLOR darkorange][B]Versión  [/COLOR][COLOR yellow]4.0.1[/COLOR][COLOR red]  Marzo 2024[/B][/COLOR]
+
+       [COLOR goldenrod][B]Media Centers:[/B][/COLOR]
+           [COLOR tan][B]Kodi Versiones Oficiales Soportadas:[/B][/COLOR]
+           [COLOR plum][B]21.x Omega,  20.x Nexus,  19.x Matrix,[/B][/COLOR]
+           [COLOR plum][B]18.x Leia  y  17.x Krypton[/B][/COLOR]
+
+       [COLOR springgreen][B]Fuente[/COLOR]  [COLOR cyan]repobal.github.io/base/[/B][/COLOR]
+       </news>
+       <summary>Balandro es un Navegador de Páginas Webs</summary>
+       <description>[COLOR moccasin][B]Navega con Kodi por Páginas Webs para poder ver sus contenidos de manera fácil. [COLOR yellow]Balandro es desde el año [COLOR cyan]2018[COLOR yellow] un MOD derivado de [COLOR yellowgreen]Pelisalacarta y Alfa[COLOR yellow],[COLOR mediumaquamarine] y tiene como objeto, permitir visualizar [COLOR deepskyblue]Películas[COLOR mediumaquamarine], [COLOR hotpink]Series[COLOR mediumaquamarine], [COLOR darkcyan]Documentales[COLOR mediumaquamarine], etc., todo a través de Internet y directamente desde su sistema Media Center. [COLOR orchid]Este Add-On es tan solo un mero Ejercicio de Aprendizaje del Lenguaje de Programación Python y se distribuye sin Ningún Contenido Multimedia adjunto al mismo [COLOR lightgrey][I]En consecuencia solo las Webs son Plenamente Responsables de los contenidos que publiquen.[/I][/B][/COLOR]</description>
+       <disclaimer>[COLOR aqua][B]Los Propietarios y Distribuidores de este Add-On no Proveen ni Distribuyen Ningún Contenido Mostrado por el Add-On, ni Tienen Afiliación alguna con los Proveedores/Webs de contenidos. [COLOR tan]Está Prohibida su distribución, solo ó junto con Contenidos Multimedia Protegidos por los Derechos de Autor. [COLOR chocolate]Si este tipo de contenido está Prohibido en su País, solamente Usted será el Responsable de su uso. [COLOR white]La vulneración de estas prohibiciones Exonerarán de cualquier Culpa a sus Autores, [COLOR red]Siendo el unico Responsable quien lo haya Distribuido ó Utilizado Ilegalmente.[/B][/COLOR]</disclaimer>
+       <platform>all</platform>
+       <license>GNU GPL v3</license>
+       <source>https://repobal.github.io/base/</source>
+       <forum>https://www.mimediacenter.info/foro/</forum>
+    </extension>
+
+    <extension point="xbmc.service" library="service.py" start="login|startup" />
 </addon>
 <addon id="repository.elementumorg" name="ElementumOrg repository" provider-name="elementumorg" version="0.0.2">
     <requires>
@@ -187,5 +244,41 @@
       <fanart>fanart.jpg</fanart>
     </assets> 
   </extension>
+</addon>
+<addon id="skin.ctouch"  version="3.9" name="Cristal Touch" provider-name="STVA">
+	<requires>
+		<import addon="resource.language.es_es" version="0.0.0"/>		
+	</requires>
+	<extension debugging="false" effectslowdown="1" point="xbmc.gui.skin">
+		<res aspect="16:9" default="true" folder="xml" width="1920" height="1080" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="es_ES">Skin Wizard para Kodi 21 Omega</summary>
+		<summary lang="en_GB">Skin Wizard para Kodi 21 Omega</summary>				
+		<description lang="es_ES">Cristal Touch es un mod del skin AppTV realizado por STVA.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV, TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>
+		<description lang="en_GB">Cristal Touch es un mod del skin AppTV realizado por STVA.[CR]Funciona perfectamente en dispositivos táctiles, pc/portátil, SmartTV, TV Box y raspberrys o similares[CR]Fácil personalización de los items del Inicio desde el menú contextual</description>		
+		<disclaimer lang="en_GB">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]</disclaimer>
+		<disclaimer lang="es_ES">Para dudas, preguntas o sugerencias [CR]Telegram: t.me/stvabuild[CR]</disclaimer>		
+		<platform>all</platform>
+		<license></license>
+		<website />
+		<email />
+		<news>Versión 3.9 - 20/10/24
+- Cristal Azul eliminado del skin
+- Luar eliminado del Skin
+- Inicio e items de deportes eliminados
+- Modificaciones necesarias para eliminar referencias a los addons eliminados
+- Ultima actualización del skin
+</news>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshot001.jpg</screenshot>
+			<screenshot>resources/screenshot002.jpg</screenshot>
+			<screenshot>resources/screenshot003.jpg</screenshot>
+			<screenshot>resources/screenshot004.jpg</screenshot>
+			<screenshot>resources/screenshot005.jpg</screenshot>
+		</assets>
+	</extension>
 </addon>
 </addons>
