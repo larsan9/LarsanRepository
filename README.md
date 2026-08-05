@@ -19,7 +19,7 @@ Repo: `https://github.com/larsan9/LarsanRepository`
 1. En Kodi: **Configuración → Administrador de archivos → Añadir fuente**.
 2. Introduce la URL raw de GitHub:
    ```
-   https://raw.githubusercontent.com/larsan9/LarsanRepository/main/
+   https:///larsan9/github.io/LarsanRepository/
    ```
 3. Ponle un nombre, por ejemplo `LarsanRepo`.
 4. Ve a **Complementos → Instalar desde archivo zip → LarsanRepo → repository.larsan.zip**.
