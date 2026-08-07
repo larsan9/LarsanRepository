@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.larsan" name="Larsan Repository" version="1.0.1" provider-name="larsan9">
+  <extension point="xbmc.addon.repository" name="Larsan Repository">
+    <dir>
+      <info compressed="false">https://raw.githubusercontent.com/larsan9/LarsanRepository/main/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/larsan9/LarsanRepository/main/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/larsan9/LarsanRepository/main/zips</datadir>
+    </dir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Larsan Repository</summary>
+    <summary lang="es_ES">Repositorio de Larsan</summary>
+    <description lang="en_GB">Personal Kodi addon repository maintained by larsan9.</description>
+    <description lang="es_ES">Repositorio personal de addons de Kodi mantenido por larsan9.</description>
+    <platform>all</platform>
+    <license>MIT</license>
+    <source>https://github.com/larsan9/LarsanRepository</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
